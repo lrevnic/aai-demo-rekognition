@@ -22,7 +22,7 @@ package com.lrevnic.aai;
 
  private S3Client getClient() {
 
-    Region region = Region.US_WEST_2;
+    Region region = Region.EU_WEST_3;
     return S3Client.builder()
             .region(region)
             .build();

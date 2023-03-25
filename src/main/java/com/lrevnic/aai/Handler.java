@@ -17,7 +17,7 @@ public String handleRequest(Map<String, String> event, Context context) {
     S3Service s3Service = new S3Service();
     AnalyzePhotos photos = new AnalyzePhotos();
 
-    String bucketName = "<Enter your bucket name>";
+    String bucketName = System.getenv("BUCKET_NAME");
     List<String> myKeys = s3Service.listBucketObjects(bucketName);
     if (delFlag.compareTo("true") == 0) {
 
